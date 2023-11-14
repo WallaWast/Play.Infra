@@ -31,3 +31,10 @@ az servicebus namespace create --name $appname --resource-group $groupname --sku
 ```powershell
 az acr create --name $appnamenew --resource-group $groupname --sku Basic
 ```
+
+## Creating the AKS cluster
+```powershell
+az aks create -n $appnamenew -g $groupname --node-vm-size Standard_B2s --node-count 2 --attach-acr $appnamenew --enable-oidc-issuer --enable-workload-identity --generate-ssh-keys
+
+az aks get-credentials --name $appnamenew --resource-group $groupname
+```
