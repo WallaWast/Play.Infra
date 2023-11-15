@@ -38,3 +38,8 @@ az aks create -n $appnamenew -g $groupname --node-vm-size Standard_B2s --node-co
 
 az aks get-credentials --name $appnamenew --resource-group $groupname
 ```
+
+## Creating the Azure Key Vault
+```powershell
+az keyvault create -n $appnamenew -g $groupname
+```
