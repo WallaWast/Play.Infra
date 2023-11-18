@@ -72,3 +72,12 @@ kubectl get service emissary-ingress -n $emissarynamespace
 kubectl apply -f .\emissary-ingress\listener.yaml -n $emissarynamespace
 kubectl apply -f .\emissary-ingress\mappings.yaml -n $emissarynamespace
 ```
+
+## Installing cert-manager
+```powershell
+helm repo add jetstack https://charts.jetstack.io
+helm repo update
+
+helm install cert-manager jetstack/cert-manager --version v1.13.2 --set installCRDs=true --namespace $emissarynamespace
+
+```
