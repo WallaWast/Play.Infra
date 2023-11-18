@@ -100,3 +100,8 @@ check the secret
 kubectl get secret -n $emissarynamespace
 kubectl get secret playeconomy-tls -n $emissarynamespace -o yaml
 ```
+
+## Enabling TLS and HTTPS
+```powershell
+kubectl apply -f .\emissary-ingress\host.yaml -n $emissarynamespace
+```
