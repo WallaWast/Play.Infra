@@ -60,8 +60,15 @@ kubectl rollout status deployment/emissary-ingress -n $emissarynamespace -w
 
 ```
 
+## Kubernets Services and Pods
 To check the pods and services
 ```powershell
 kubectl get pods -n $emissarynamespace
 kubectl get service emissary-ingress -n $emissarynamespace
+```
+
+## Configuring Emissary-ingress routing
+```powershell
+kubectl apply -f .\emissary-ingress\listener.yaml -n $emissarynamespace
+kubectl apply -f .\emissary-ingress\mappings.yaml -n $emissarynamespace
 ```
