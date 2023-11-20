@@ -36,3 +36,5 @@ spec:
   hostname: wa-playeconomy.eastus.cloudapp.azure.com
   prefix: /trading-svc/
   service: trading-service.trading
+  allow_upgrade:
+    - websocket
