@@ -38,3 +38,13 @@ spec:
   service: trading-service.trading
   allow_upgrade:
     - websocket
+
+---
+apiVersion: getambassador.io/v3alpha1
+kind: Mapping
+metadata:
+  name: frontend-mapping
+spec:
+  hostname: wa-playeconomy.eastus.cloudapp.azure.com
+  prefix: /
+  service: frontend-client.frontend
