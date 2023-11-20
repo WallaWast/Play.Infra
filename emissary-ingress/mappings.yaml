@@ -6,3 +6,13 @@ spec:
   hostname: wa-playeconomy.eastus.cloudapp.azure.com
   prefix: /identity-svc/
   service: identity-service.identity
+
+---
+apiVersion: getambassador.io/v3alpha1
+kind: Mapping
+metadata:
+  name: catalog-mapping
+spec:
+  hostname: wa-playeconomy.eastus.cloudapp.azure.com
+  prefix: /catalog-svc/
+  service: catalog-service.catalog
