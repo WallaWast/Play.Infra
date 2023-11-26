@@ -19,6 +19,18 @@ services:
       - rabbitmqdata:/var/lib/rabbitmq
     hostname: rabbitmq
 
+  seq:
+    image: datalust/seq
+    container_name: seq
+    environment:
+      - ACCEPT_EULA=Y
+    ports:
+      - 5341:5341
+      - 8079:80
+    volumes:
+      - seqdata:/data
+
 volumes:
   mongodbdata:
   rabbitmqdata:
+  seqdata:
