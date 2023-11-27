@@ -58,3 +58,15 @@ spec:
   hostname: wa-playeconomy.eastus.cloudapp.azure.com
   prefix: /seq/
   service: seq.observability
+
+---
+apiVersion: getambassador.io/v3alpha1
+kind: Mapping
+metadata:
+  name: jaeger-mapping
+spec:
+  hostname: wa-playeconomy.eastus.cloudapp.azure.com
+  prefix: /jaeger/
+  rewrite: ""
+  service: jaeger-query.observability:16686
+#got the service name from 'kubectl get service -n observability'
